@@ -2,14 +2,47 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Sistema de diagnostico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Sistema de Diagnóstico Genético</title>
 </head>
 <body>
-    <h2>Diagnóstico se você esta virando um tatu</h2>
+    <h2>Diagnóstico de Genética para Fisiculturismo</h2>
     <form id="formDiagnostico">
-        <label>Você tem medo de sair de casa? (s/n):<input name="MedoDeSairDeCasa" required></label><br><br>
-        <label>Você é cascudo? (s/n): <input name="Cascudo"></label><br><br>
-        <label>Você tem amor reciproco? (s/n): <input name="AmorReciproco"></label><br><br>
+        <label>Sexo:
+            <select name="sexo" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+        </label><br><br>
+
+        <label>Altura (ex: 1.75):
+            <input type="number" step="0.01" name="altura" required>
+        </label><br><br>
+
+        <label>Estrutura óssea:
+            <select name="estrutura" required>
+                <option value="ombros_largos">Cintura fina e ombros largos</option>
+                <option value="iguais">Cintura e ombros iguais</option>
+            </select>
+        </label><br><br>
+
+        <label>Facilidade em ganhar músculos:
+            <select name="musculo" required>
+                <option value="muito_facil">Muito fácil</option>
+                <option value="facil">Fácil</option>
+                <option value="dificil">Difícil</option>
+                <option value="muito_dificil">Muito difícil</option>
+            </select>
+        </label><br><br>
+
+        <label>Facilidade para definir:
+            <select name="definicao" required>
+                <option value="facil">Define fácil</option>
+                <option value="normal">Define normal</option>
+                <option value="sofrido">Define sofrido</option>
+            </select>
+        </label><br><br>
+
         <button type="submit">Diagnosticar</button>
     </form>
 
